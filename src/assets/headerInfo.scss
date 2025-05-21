@@ -1,0 +1,15 @@
+.header{
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; height: 60dvh; color: #fff;
+    .datetime{
+        text-align: center;
+        h1,h2{font-weight: 500; font-family: "Open Sans", sans-serif; text-shadow: 0 0 8px rgba(0,0,0,.4);}
+        h1{
+            font-size: 160px; display: flex; flex-wrap: wrap; justify-content: center; line-height: 1; align-items: baseline; font-size: 180px; letter-spacing: -5px;
+            span{
+                &:first-child{width: 100%;}
+            }
+        }
+        h2{font-size: 120px;}
+    }
+
+}
