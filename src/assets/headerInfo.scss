@@ -1,15 +1,19 @@
 .header{
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; height: 60dvh; color: #fff;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 20px; padding: 16dvh 0 !important; height: 100%; color: #fff; font-family: "Poiret One", sans-serif; line-height: 1;
     .datetime{
         text-align: center;
-        h1,h2{font-weight: 500; font-family: "Open Sans", sans-serif; text-shadow: 0 0 8px rgba(0,0,0,.4);}
+        h1,h2{text-shadow: 0 0 8px rgba(0,0,0,.6);}
         h1{
-            font-size: 160px; display: flex; flex-wrap: wrap; justify-content: center; line-height: 1; align-items: baseline; font-size: 180px; letter-spacing: -5px;
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; font-size: 160px;
             span{
-                &:first-child{width: 100%;}
+                &:first-child{width: 100%; font-size: 116px;}
             }
         }
-        h2{font-size: 120px;}
+        h2{font-size: 88px;}
     }
-
+    .weather{
+        display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; font-size: 32px; text-transform: uppercase;
+        p{text-shadow: 0 0 8px rgba(0,0,0,.6);}
+    }
 }
+
