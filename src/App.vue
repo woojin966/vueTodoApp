@@ -7,7 +7,6 @@
         </section>
         <section class="todo_section" ref="todoSection">
             <div class="todo_content">
-                <TodoInput />
                 <TodoList />
                 <LoadMoreButton />
             </div>
@@ -32,9 +31,6 @@
     // gsap.registerPlugin(ScrollTrigger)
 
     import HeaderInfo from './components/HeaderInfo.vue'
-    import LoadMoreButton from './components/LoadMoreButton.vue'
-    import TodoInput from './components/TodoInput.vue'
-    // import TodoItem from './components/TodoItem.vue'
     import TodoList from './components/TodoList.vue'
 
     // .body_wrap 배경이미지 unsplash api 관련
@@ -57,12 +53,10 @@
         }
     }
 
-    // todo input, todo list section으로 넘어가기
+    // todo input <-> todo list section 이동
     const todoSection = ref(null)
     const dateSection = ref(null)
     const scrollToTodoSection = () => {
-        // const targetY = todoSection.value.getBoundingClientRect().top + window.scrollY
-        // window.scrollTo({ top: targetY, behavior: 'smooth' })
         if (todoSection.value) {
             const offsetTop = todoSection.value.offsetTop
             window.scrollTo({
@@ -85,15 +79,13 @@
         // .body_wrap 배경이미지 unsplash api
         fetchBackgroundImage()
 
-        // 이거... 못씀. 나중에 덮는 섹션 만들때 활용
-        // datewhether section <-> todo section 스크롤
+        // 이거... 못씀. 나중에 덮는 섹션 만들때 활용 : datewhether section <-> todo section 스크롤
         // ScrollTrigger.create({
         //     trigger: ".datewhether_section",
         //     start: "top top",
         //     end: "bottom 150px",
         //     pin: ".datewhether_content"
         // });
-
         // ScrollTrigger.create({
         //     trigger: ".todo_section",
         //     start: "top center",

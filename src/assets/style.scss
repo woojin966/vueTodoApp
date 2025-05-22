@@ -1,4 +1,5 @@
 @import 'reset.css';
+
 // opensans : font-family: "Open Sans", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 //special gothic : font-family: "Special Gothic Expanded One", sans-serif;
@@ -25,7 +26,7 @@
 }
 
 .move_btn{
-    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 40px; font-size: 20px; font-family: "Poiret One", sans-serif; color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 20px; font-family: "Poiret One", sans-serif; color: #fff; cursor: pointer; text-shadow: $shadow;
     span{animation: bounce 1.2s infinite; }
 }
 

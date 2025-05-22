@@ -2,18 +2,21 @@
     display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 20px; padding: 16dvh 0 !important; height: 100%; color: #fff; font-family: "Poiret One", sans-serif; line-height: 1;
     .datetime{
         text-align: center;
-        h1,h2{text-shadow: 0 0 8px rgba(0,0,0,.6);}
+        h1,h2{text-shadow: $shadow; display: flex; align-items: center; justify-content: center;}
         h1{
-            display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; font-size: 160px;
+            flex-wrap: wrap; font-size: 160px;
             span{
                 &:first-child{width: 100%; font-size: 116px;}
             }
         }
-        h2{font-size: 88px;}
+        h2{gap: 8px; font-size: 88px;}
     }
     .weather{
         display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; font-size: 32px; text-transform: uppercase;
-        p{text-shadow: 0 0 8px rgba(0,0,0,.6);}
+        p{text-shadow: $shadow;}
+    }
+    @media all and (min-width: 1024px) and (max-height: 600px){
+        padding: 8dvh 0 !important;
     }
 }
 
