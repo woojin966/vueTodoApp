@@ -1,5 +1,5 @@
 <template>
-    <span>LoadMoreButton</span>
+    <button>MORE</button>
 </template>
 
-<script></script>
+<script setup></script>
