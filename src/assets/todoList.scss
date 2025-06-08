@@ -1,4 +1,22 @@
-.todo_list li.done {
-    text-decoration: line-through;
-    color: #aaa;
-  }
+.todo_list{
+    li{
+        transition: all 0.3s ease;
+        &.done {
+            color: #aaa;
+            span {
+                position: relative; color: #aaa;
+                &::after {content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 2px; background: #aaa; animation: strike 0.4s forwards;}
+            }
+        }
+    }
+}
+
+// 완료일 중간 선 긋기 애니메이션
+@keyframes strike {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+// 할일 목록 fadein, out
+.fade-enter-from, .fade-leave-to {opacity: 0; transform: translateY(10px);}
+.fade-enter-active, .fade-leave-active {transition: all 0.3s ease;}
