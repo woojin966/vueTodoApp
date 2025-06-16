@@ -1,4 +1,21 @@
+.filter_box{
+    button{text-transform: uppercase; color: #fff; padding: 8px 12px; font-family: "Poiret One", sans-serif;}
+    > button{display: flex; align-items: center; justify-content: space-between; gap: 4px; width: 92px; height: 40px;   border: 1px solid #fff; border-radius: 4px;}
+    ul{
+        position: absolute; top: 40px; z-index: 1;
+        flex-direction: column; gap: 1px;display: none; width: 92px; border: 1px solid #fff; border-radius: 4px; margin-top: 4px;
+        &.on{display: flex;}
+        li{
+            button{color: #000; background-color: #fff; width: 100%; text-align: left;}
+            &:last-child{
+                button{border-bottom: none;}
+            }
+        }
+    }
+}
+
 .todo_list{
+    width: 100%;
     li{
         transition: all 0.3s ease;
         &.done {

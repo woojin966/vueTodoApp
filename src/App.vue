@@ -6,28 +6,30 @@
             <HeaderInfo class="datewhether_content" @scroll-to-todo="scrollToTodoSection" />
         </section>
         <section class="todo_section" ref="todoSection">
-            <div class="todo_content">
-                <!-- TodoInput.vue에서 보낸 emit add-todo를 받아, add-todo와 함께 보낸 데이터 trimmed로 함수 addTodo실행 -->
-                <TodoInput @add-todo="addTodo" />
-                <!-- TodoList.vue에 todos를 props로 보냄 -->
-                 <!-- TodoList.vue에서 보낸 emitupdate-todo-status와 함개 보낸 데이터 todo.id를 받아 함수 toggleStatus 실행 -->
-                <!-- emit으로 받은 delete-todo로 todo를 받아 함수 deleteTodo 실행 -->
-                <!-- delete-all, delete-selected, delete-done emit들 받아 각 함수들실행(전체삭제, 선택삭제, 마친일 삭제) -->
-                <TodoList 
-                    :todos="todos" @update-todo-status="toggleStatus" 
-                    @delete-todo="deleteTodo" 
-                    @delete-all="deleteAll"
-                    @delete-selected="deleteSelected"
-                    @delete-done="deleteDone"
-                />
-            </div>
-            <div class="top_btn_box">
-                <button @click="scrollToTopSection" class="move_btn top_btn">
-                    TOP
-                    <span>
-                        <font-awesome-icon icon="chevron-up" />
-                    </span>
-                </button>
+            <div class="content">
+                <div class="todo_content">
+                    <!-- TodoInput.vue에서 보낸 emit add-todo를 받아, add-todo와 함께 보낸 데이터 trimmed로 함수 addTodo실행 -->
+                    <TodoInput @add-todo="addTodo" />
+                    <!-- TodoList.vue에 todos를 props로 보냄 -->
+                    <!-- TodoList.vue에서 보낸 emitupdate-todo-status와 함개 보낸 데이터 todo.id를 받아 함수 toggleStatus 실행 -->
+                    <!-- emit으로 받은 delete-todo로 todo를 받아 함수 deleteTodo 실행 -->
+                    <!-- delete-all, delete-selected, delete-done emit들 받아 각 함수들실행(전체삭제, 선택삭제, 마친일 삭제) -->
+                    <TodoList 
+                        :todos="todos"  @update-todo-status="toggleStatus" 
+                        @delete-todo="deleteTodo" 
+                        @delete-all="deleteAll"
+                        @delete-selected="deleteSelected"
+                        @delete-done="deleteDone"
+                    />
+                </div>
+                <div class="top_btn_box">
+                    <button @click="scrollToTopSection" class="move_btn top_btn">
+                        TOP
+                        <span>
+                            <font-awesome-icon icon="chevron-up" />
+                        </span>
+                    </button>
+                </div>
             </div>
         </section>
     </div>

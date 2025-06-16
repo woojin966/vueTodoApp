@@ -1,1 +1,8 @@
-input{background-color: orange;}
+.todo_input_box{
+    display: flex; align-items: center; gap: 8px; width: 100%;
+    input{
+        padding: 8px 12px; width: calc(100% - 92px); height: 44px; border-radius: 4px; border: 1px solid #fff; background-color: transparent; color: #fff;
+        &::placeholder{color: #fff; font-family: "Poiret One", sans-serif;}
+    }
+    button{display: flex; align-items: center; justify-content: center; padding: 8px; width: 88px; height: 44px; border: 1px solid #fff; border-radius: 4px; color: #fff; font-family: "Poiret One", sans-serif;}
+}

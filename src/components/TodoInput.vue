@@ -1,7 +1,7 @@
 <template>
     <div class="todo_input_box">
-        <input type="text" v-model="newTodo" @keydown.enter="submitTodo" placeholder="할 일을 입력하세요" />
-        <button @click="submitTodo">등록</button>
+        <input type="text" v-model="newTodo" @keydown.enter="submitTodo" class="big n" placeholder="TYPE YOUR TO DO" />
+        <button class="big n" @click="submitTodo">SUBMIT</button>
     </div>
 </template>
 

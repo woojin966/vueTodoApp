@@ -1,19 +1,19 @@
 <template>
     <div class="filter_box">
-        <button id="placeholder_btn">
+        <button id="placeholder_btn" class="medium n" @click="shownFilter" ref="filterBtn">
             <span>{{ placeholderText }}</span>
             <font-awesome-icon icon="chevron-down" />
         </button>
-        <ul>
+        <ul ref="filterList">
             <!-- 각 버튼 클릭시 setFilter함수 실행 : 각 버튼에 매개변수를 보내서, filterType과 placeholderText에 할당해서 위의 플레이스홀더 변경하고, 필터링 하기 위한 각 필터의 감지할 value에 할당시키기 -->
             <li>
-                <button id="show_all" @click="setFilter('all')">ALL</button>
+                <button id="show_all" class="medium n" @click="setFilter('all')">ALL</button>
             </li>
             <li>
-                <button id="show_todo" @click="setFilter('todo')">TODO</button>
+                <button id="show_todo" class="medium n" @click="setFilter('todo')">TODO</button>
             </li>
             <li>
-                <button id="show_done" @click="setFilter('done')">DONE</button>
+                <button id="show_done" class="medium n" @click="setFilter('done')">DONE</button>
             </li>
         </ul>
     </div>
@@ -94,9 +94,17 @@
     const filterType = ref('all') // 필터타입 초기 설정 : all, selected, done
     const placeholderText = ref('all') // placeholder 텍스트 초기설정 : ALL, SELECTED, DONE(css로 대문자화 필요)
     // 각 버튼들 클릭하면 실행될 함수 setFilter : 각 버튼이 보낸 매개변수들을 type으로 받아 각 필터타입과 플레이스 텍스트들에 할당
+    const filterBtn = ref(null)
+    const filterList = ref(null)    
+
     const setFilter = (type) => {
         filterType.value = type
         placeholderText.value = type
+        filterList.value.classList.remove('on')
+    }
+    // 필터 옵션 보이게 하기
+    const shownFilter = () => {
+        filterList.value.classList.toggle('on')
     }
 
     // 전체삭제, 선택삭제, 마친일 삭제

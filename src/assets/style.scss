@@ -13,6 +13,17 @@
 // korna : font-family: "Krona One", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
+.big{font-size: 20px;}
+.medium{font-size: 18px;}
+.text{font-size: 16px;}
+.small{font-size: 14px;}
+.mini{font-size: 12px;}
+.bb{font-weight: bolder;}
+.b{font-weight: bold;}
+.sb{font-weight: 600;}
+.mb{font-weight: 500;}
+.n{font-weight: 400;}
+
 .body_wrap{
     min-height: 100dvh;
 }
@@ -20,10 +31,14 @@
 .datewhether_section{
     height: 100dvh; position: relative; z-index: 1;
 }
-
 .todo_section{
     min-height: 100dvh; position: relative; z-index: 2;
 }
+
+section > div{
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 20px; padding: 16dvh 0 !important; height: 100%; color: #fff; font-family: "Poiret One", sans-serif; line-height: 1;
+}
+.todo_content{display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; width: 80%;}
 
 .move_btn{
     display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 20px; font-family: "Poiret One", sans-serif; color: #fff; cursor: pointer; text-shadow: $shadow;
