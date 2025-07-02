@@ -16,6 +16,24 @@
     }
     @media all and (min-width: 1024px) and (max-height: 600px){
         padding: 8dvh 0 !important;
+        .datetime{
+            h1{
+                font-size: 100px;
+                span:first-child{font-size: 100px;}
+            }
+            h2{font-size: 72px;}
+        }
+        
+    }
+    @media all and (max-width: 480px){
+        .datetime{
+            h1{
+                font-size: 80px;
+                span:first-child{font-size: 80px;}
+            }
+            h2{font-size: 60px;}
+        }
+        .weather{font-size: 28px;}
     }
 }
 

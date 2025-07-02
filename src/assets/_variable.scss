@@ -1,2 +1,12 @@
 // color
 $shadow: 0 0 8px rgba(0,0,0,.6);
+$gray: #aaa;
+$bgWhite: rgba(255,255,255,.2);
+
+/* Pretendard */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+// poiret one : font-family: "Poiret One", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+$mainFont: "Poiret One", sans-serif;
+$secondFont : 'Pretendard', 'Apple SD Sandol Gothic Neo', sans-serif;;

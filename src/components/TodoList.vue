@@ -1,5 +1,6 @@
 <template>
-    <div class="filter_box">
+    <div class="filter_delete_wrap">
+        <div class="filter_box">
         <button id="placeholder_btn" class="medium n" @click="shownFilter" ref="filterBtn">
             <span>{{ placeholderText }}</span>
             <font-awesome-icon icon="chevron-down" />
@@ -18,9 +19,11 @@
         </ul>
     </div>
     <div class="delete_btn_box">
-        <button id="all_del" @click="deleteAllTodos">ALL</button>
-        <button id="selected_del" @click="deleteSelectedTodos">SELECTED</button>
-        <button id="done_del" @click="deleteDoneTodos">DONE</button>
+        <p class="medium n">DELETE :</p>
+        <button id="all_del" class="medium n" @click="deleteAllTodos">ALL</button>
+        <button id="selected_del" class="medium n" @click="deleteSelectedTodos">SELECTED</button>
+        <button id="done_del" class="medium n"  @click="deleteDoneTodos">DONE</button>
+    </div>
     </div>
     <transition-group name="fade" tag="ul" class="todo_list">
         <!-- v-for : vue 반복문 - todo는 배열 visivleTodos의 각 항목 -->
@@ -35,16 +38,16 @@
                     :checked="todo.status === 'done'"
                     @change="toggleTodoStatus(todo)"
                 />
-                <span>{{ todo.text }}</span>
+                <span class="text n">{{ todo.text }}</span>
             </div>
             <!-- 클릭시 deleteTodo함수 발동 : 해당 todo.id 담아서 부모로 emit -->
-            <button class="delete_btn" @click="deleteTodo(todo)">
+            <button class="delete_btn text n" @click="deleteTodo(todo)">
                 <font-awesome-icon :icon="['fas', 'trash-can']" />
             </button>
         </li>
     </transition-group>
     <!-- todo의 개수가 showCount보다 크면 보이기(v-if), 클릭시 loadMore함수 실현(5개씩 더 보이기) -->
-    <button v-if="showCount < todos.length" @click="loadMore">MORE</button>
+    <button v-if="showCount < todos.length" @click="loadMore" class="medium n more_btn">MORE</button>
 </template>
 
 <script setup>
