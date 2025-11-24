@@ -3,7 +3,7 @@
     <div class="body_wrap" :style="backgroundStyle" ref="dateSection">
         <!-- <section class="fake_section"></section> -->
         <section class="datewhether_section">
-            <HeaderInfo class="datewhether_content" @scroll-to-todo="scrollToTodoSection" />
+            <TimeDateSection class="datewhether_content" @scroll-to-todo="scrollToTodoSection" />
         </section>
         <section class="todo_section" ref="todoSection">
             <div class="content">
@@ -37,7 +37,7 @@
 
 <script setup>
     import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
-    import HeaderInfo from './components/HeaderInfo.vue'
+    import TimeDateSection from './components/TimeDateSection.vue'
     import TodoInput from './components/TodoInput.vue'
     import TodoList from './components/TodoList.vue'
 

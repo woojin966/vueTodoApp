@@ -108,5 +108,5 @@
 </script>
 
 <style scoped lang="scss">
-@import '../assets/headerInfo.scss';
+@import '../styles/TimeDateSection.scss';
 </style>

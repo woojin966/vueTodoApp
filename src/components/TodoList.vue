@@ -130,5 +130,5 @@
 </script>
 
 <style scoped lang="scss">
-@import '../assets/todoList.scss';
+@import '../styles/todoList.scss';
 </style>

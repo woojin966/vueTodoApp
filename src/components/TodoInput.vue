@@ -24,5 +24,5 @@
 </script>
 
 <style scoped lang="scss">
-@import '../assets/todoInput.scss';
+@import '../styles/todoInput.scss';
 </style>
