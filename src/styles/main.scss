@@ -1,0 +1,154 @@
+@import 'variable.scss';
+@import 'mixins.scss';
+@import 'reset.css';
+
+.body_wrap {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0,0,0,0.4),
+      rgba(0,0,0,0.6)
+    );
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.filter_delete_wrap{
+    display: flex; justify-content: space-between; align-items: center; width: 100%;
+    @media all and (max-width: 480px){
+        flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+}
+
+.big{font-size: 20px;}
+.medium{font-size: 18px;}
+.text{font-size: 16px;}
+.small{font-size: 14px;}
+.mini{font-size: 12px;}
+.bb{font-weight: bolder;}
+.b{font-weight: bold;}
+.sb{font-weight: 600;}
+.mb{font-weight: 500;}
+.n{font-weight: 400;}
+
+.datewhether_section{
+    height: 100dvh; position: relative; z-index: 1;
+}
+.todo_section{
+    min-height: 100dvh; position: relative; z-index: 2;
+}
+
+section > div{
+  display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 16dvh 0 !important; height: 100%; color: #fff; font-family: $mainFont; line-height: 1;
+  @media all and (max-width: 480px){padding: 12dvh 0 !important;}
+}
+.datewhether_content{justify-content: center;}
+.todo_content{
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 40%;
+  @media all and (max-width: 1280px){width: 50%;}
+  @media all and (max-width: 1024px){width: 60%;}
+  @media all and (max-width: 840px){width: 80%;}
+  @media all and (max-width: 480px){width: calc(100% - 32px);}
+}
+
+.move_btn{
+    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 20px; font-family: $mainFont; color: #fff; cursor: pointer; text-shadow: $shadow-strong;
+    span{animation: bounce 1.2s infinite; }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+// for dark mode
+body.light {
+  background-color: $color-bg-light;
+  color: $color-text-light;
+  .header_bar {
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.12);
+    .actions button {
+      background: $color-button-bg-light;
+      color: $color-text-light;
+    }
+  }
+  .todo_list li {
+    background: $color-card-light;
+    span { color: $color-text-light; }
+  }
+  .todo_input_box input {
+    background: $color-input-bg-light;
+    color: $color-text-light;
+    border-color: $color-border-light;
+  }
+  .todo_input_box button, .delete_btn_box button, .more_btn {
+    background: $color-button-bg-light;
+    color: $color-text-light;
+    border-color: $color-border-light;
+  }
+  .filter_box{
+    > button {
+      background: $color-button-bg-light;
+      border-color: $color-border-light;
+      color: $color-text-light;
+    }
+    ul li button {
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+body.dark {
+  background-color: $color-bg-dark;
+  color: $color-text-dark;
+  .header_bar{
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.35);
+    .actions button {
+      background: $color-button-bg-dark;
+      color: $color-text-dark;
+    }
+  }
+  .todo_list li {
+    background: $color-card-dark;
+    span { color: $color-text-dark; }
+  }
+  .todo_input_box input {
+    background: $color-input-bg-dark;
+    color: $color-text-dark;
+    border-color: $color-border-dark;
+  }
+  .todo_input_box button, .delete_btn_box button, .more_btn {
+    background: $color-button-bg-dark;
+    color: $color-text-dark;
+    border-color: $color-border-dark;
+  }
+  .filter_box{
+    > button {
+      background: $color-button-bg-dark;
+      border-color: $color-border-dark;
+      color: $color-text-dark;
+    }
+    ul li button {
+      background: #222;
+      color: #eee;
+      border-color: $color-border-dark;
+    }
+  }
+}

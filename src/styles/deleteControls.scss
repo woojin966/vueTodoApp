@@ -1,0 +1,21 @@
+.delete_btn_box {
+  display: flex;
+  gap: $space-sm;
+  align-items: center;
+
+  button {
+    font-family: $mainFont;
+    padding: $space-xs $space-md;
+    border: 1px solid $white;
+    border-radius: $radius-sm;
+    background: rgba(255,255,255,0.15);
+    color: $white;
+    cursor: pointer;
+    transition: $transition-fast;
+
+    &:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+  }
+}

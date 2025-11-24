@@ -1,3 +1,5 @@
+@import './variables';
+@import './mixins';
 @import 'reset.css';
 
 .big{font-size: 20px;}
@@ -36,7 +38,7 @@ section > div{
 }
 
 .move_btn{
-    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 20px; font-family: $mainFont; color: #fff; cursor: pointer; text-shadow: $shadow;
+    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 20px; font-family: $mainFont; color: #fff; cursor: pointer; text-shadow: $shadow-strong;
     span{animation: bounce 1.2s infinite; }
 }
 

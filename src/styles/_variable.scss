@@ -1,12 +1,68 @@
-// color
-$shadow: 0 0 8px rgba(0,0,0,.6);
-$gray: #aaa;
-$bgWhite: rgba(255,255,255,.2);
+// =========================
+// COLORS
+// =========================
+$white: #ffffff;
+$black: #000000;
 
-/* Pretendard */
+$bgWhite: rgba(255,255,255,.2);
+$bgGlassLight: rgba(255,255,255,.12);
+$bgGlassDark: rgba(0,0,0,0.25);
+
+$gray: #aaa;
+
+$shadow-soft: 0 4px 12px rgba(0,0,0,0.15);
+$shadow-strong: 0 0 8px rgba(0,0,0,.6); // 기존 shadow 유지
+
+
+// =========================
+// FONT
+// =========================
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-// poiret one : font-family: "Poiret One", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 $mainFont: "Poiret One", sans-serif;
-$secondFont : 'Pretendard', 'Apple SD Sandol Gothic Neo', sans-serif;;
+$secondFont: 'Pretendard', 'Apple SD Sandol Gothic Neo', sans-serif;
+
+
+// =========================
+// SPACING
+// =========================
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+
+
+// =========================
+// RADIUS
+// =========================
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 20px;
+
+
+// =========================
+// OTHER
+// =========================
+$transition-fast: .2s;
+$transition-normal: .3s;
+
+// Theme Colors
+$color-bg-light: rgba(255,255,255,0.12);
+$color-bg-dark: rgba(255,255,255,0.06);
+
+$color-card-light: rgba(255,255,255,0.2);
+$color-card-dark: rgba(0,0,0,0.35);
+
+$color-border-light: rgba(255,255,255,0.4);
+$color-border-dark: rgba(255,255,255,0.2);
+
+$color-text-light: #ffffff;
+$color-text-dark: #dddddd;
+
+$color-input-bg-light: rgba(255,255,255,0.15);
+$color-input-bg-dark: rgba(0,0,0,0.3);
+
+$color-button-bg-light: rgba(255,255,255,0.15);
+$color-button-bg-dark: rgba(255,255,255,0.1);

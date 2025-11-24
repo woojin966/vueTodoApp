@@ -1,0 +1,19 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fade-in($time: .3s) {
+  animation: fadeIn $time ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+@mixin glass-effect($blur: 6px) {
+  backdrop-filter: blur($blur);
+  background: rgba(255,255,255,0.1);
+}

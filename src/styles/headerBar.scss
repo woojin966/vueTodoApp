@@ -1,0 +1,37 @@
+.header_bar {
+  width: 100%;
+  padding: $space-sm $space-lg;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .header_inner {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+      button {
+        font-size: 16px;
+        border-radius: $radius-sm;
+        background: rgba(255,255,255,0.15);
+        border: none;
+        cursor: pointer;
+        transition: $transition-normal;
+        color: $white;
+        padding: 8px 12px;
+        border: 1px solid $white;
+        min-width: 60px;
+        &:hover {
+          background: rgba(255,255,255,0.25);
+        }
+      }
+    }
+  }
+}
