@@ -1,5 +1,5 @@
 <template>
-  <transition-group name="fade" tag="ul" class="todo_list">
+  <transition-group name="fade" tag="ul" class="todo_list fade-up">
     <li
       v-for="todo in visibleTodos"
       :key="todo.id"

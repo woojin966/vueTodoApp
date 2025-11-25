@@ -2,10 +2,10 @@
 <template>
     <div class="body_wrap" :style="backgroundStyle" ref="dateSection">
         <HeaderBar />
-        <section class="datewhether_section">
+        <section class="datewhether_section fade-down">
             <TimeDateSection class="datewhether_content" @scroll-to-todo="scrollToTodoSection" />
         </section>
-        <section class="todo_section" ref="todoSection">
+        <section class="todo_section fade-up" ref="todoSection">
             <div class="content">
                 <div class="todo_content">
                     <TodoInput @add-todo="addTodo" />
@@ -47,6 +47,7 @@ import TodoFilter from './components/TodoFilter.vue'
 import DeleteControls from './components/DeleteControls.vue'
 import TodoList from './components/TodoList.vue'
 import { useTodos } from './composables/useTodos'
+import { useFadeIn } from "./composables/useFadeIn";
 
 const {
   todos,
@@ -116,6 +117,9 @@ const backgroundStyle = computed(() => ({
   backgroundPosition: 'center',
   minHeight: '100vh',
 }))
+
+// fade in
+useFadeIn();
 </script>
 
 

@@ -1,8 +1,7 @@
 .filter_box {
   position: relative;
-
   > button {
-    width: 110px;
+    width: 120px;
     height: 40px;
     padding: 0 $space-sm;
     display: flex;
@@ -15,16 +14,14 @@
     font-family: $mainFont;
     cursor: pointer;
     transition: $transition-fast;
-
     &:hover {
       background: rgba(255,255,255,0.3);
     }
   }
-
   ul {
     position: absolute;
     top: 44px;
-    width: 110px;
+    width: 120px;
     background: rgba(255,255,255,1);
     border-radius: $radius-sm;
     overflow: hidden;
@@ -44,7 +41,6 @@
       }
     }
   }
-
   @media (max-width: 480px) {
     width: 100%;
     > button,

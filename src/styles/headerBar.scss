@@ -8,8 +8,7 @@
   z-index: 10;
   .header_inner {
     width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +30,9 @@
         &:hover {
           background: rgba(255,255,255,0.25);
         }
+      }
+      @media all and (max-width: 480px){
+        button{font-size: 14px;}
       }
     }
   }

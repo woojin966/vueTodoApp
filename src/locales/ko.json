@@ -1,0 +1,17 @@
+{
+  "inputPlaceholder": "할 일을 입력해 주세요",
+  "submit": "등록",
+
+  "filter_all": "전체",
+  "filter_todo": "진행중",
+  "filter_done": "완료",
+
+  "delete_all": "전체삭제",
+  "delete_selected": "선택삭제",
+  "delete_done": "완료삭제",
+
+  "header_title": "할 일 목록",
+  "header_dark": "다크",
+  "header_light": "라이트",
+  "lang_toggle": "한국어"
+}

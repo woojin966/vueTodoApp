@@ -2,7 +2,6 @@
   display: flex;
   gap: $space-sm;
   align-items: center;
-
   button {
     font-family: $mainFont;
     padding: $space-xs $space-md;
@@ -12,10 +11,14 @@
     color: $white;
     cursor: pointer;
     transition: $transition-fast;
-
     &:hover {
       background: rgba(255,255,255,0.3);
       transform: translateY(-2px);
     }
+  }
+  @media (max-width: 480px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 }

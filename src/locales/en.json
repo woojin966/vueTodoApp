@@ -1,0 +1,17 @@
+{
+  "inputPlaceholder": "TYPE YOUR TO DO",
+  "submit": "SUBMIT",
+  
+  "filter_all": "ALL",
+  "filter_todo": "TODO",
+  "filter_done": "DONE",
+
+  "delete_all": "ALL",
+  "delete_selected": "SELECTED",
+  "delete_done": "DONE",
+
+  "header_title": "TODO APP",
+  "header_dark": "Dark",
+  "header_light": "Light",
+  "lang_toggle": "EN"
+}

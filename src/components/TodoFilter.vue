@@ -1,5 +1,5 @@
 <template>
-  <div class="filter_box">
+  <div class="filter_box fade-up">
     <button class="medium n" @click="toggleMenu">
       <span>{{ displayText }}</span>
       <font-awesome-icon icon="chevron-down" />

@@ -4,7 +4,8 @@
 
 .body_wrap {
   position: relative;
-
+  width: 100%;
+  overflow-x: hidden;
   &::before {
     content: '';
     position: absolute;
@@ -40,11 +41,24 @@
 .mb{font-weight: 500;}
 .n{font-weight: 400;}
 
-.datewhether_section{
-    height: 100dvh; position: relative; z-index: 1;
-}
-.todo_section{
-    min-height: 100dvh; position: relative; z-index: 2;
+/* Main Sections */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 12dvh 0 !important;
+  min-height: 100dvh;
+  position: relative;
+  &.datewhether_section{
+   z-index: 1;
+  }
+  &.todo_section{
+    z-index: 2;
+  }
+  @media (max-width: 480px) {
+    padding: 8dvh 0 !important;
+  }
 }
 
 section > div{
@@ -151,4 +165,44 @@ body.dark {
       border-color: $color-border-dark;
     }
   }
+}
+
+/* ===== Fade In Up ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Fade In Down ===== */
+.fade-down {
+  opacity: 0;
+  transform: translateY(-16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Transition-group improved ===== */
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.28s ease;
 }

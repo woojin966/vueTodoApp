@@ -1,5 +1,5 @@
 <template>
-    <div class="todo_input_box">
+    <div class="todo_input_box fade-up">
         <input type="text" v-model="newTodo" @keydown.enter="submitTodo" class="big n" placeholder="TYPE YOUR TO DO" />
         <button class="big n" @click="submitTodo">SUBMIT</button>
     </div>

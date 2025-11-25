@@ -1,5 +1,5 @@
 <template>
-  <div class="delete_btn_box">
+  <div class="delete_btn_box fade-up">
     <p class="medium n">DELETE :</p>
     <button id="all_del" class="medium n" @click="$emit('delete-all')">ALL</button>
     <!-- <button id="selected_del" class="medium n" @click="$emit('delete-selected', selectedIds)">SELECTED</button> -->
