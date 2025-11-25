@@ -2,10 +2,9 @@
   <header class="header_bar">
     <div class="header_inner">
       <div class="actions">
-        <!-- 언어 전환: i18n 적용 전에는 버튼만 표시 -->
-        <!-- <button class="lang_btn">EN</button> -->
-        
-        <!-- 다크모드 토글 준비용 자리 -->
+        <button class="lang_btn" @click="toggleLang">
+          {{ locale === 'en' ? 'KO' : 'EN' }}
+        </button>
         <button class="dark_btn"            @click="toggleTheme">
             <font-awesome-icon :icon="themeIcon" />
         </button>
@@ -16,6 +15,13 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
+
+// i18n
+const { locale, t } = useI18n();
+const toggleLang = () => {
+  locale.value = locale.value === "en" ? "ko" : "en";
+};
 
 const theme = ref("light"); // 기본 always light
 

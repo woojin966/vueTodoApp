@@ -1,12 +1,16 @@
 <template>
     <div class="todo_input_box fade-up">
-        <input type="text" v-model="newTodo" @keydown.enter="submitTodo" class="big n" placeholder="TYPE YOUR TO DO" />
-        <button class="big n" @click="submitTodo">SUBMIT</button>
+        <input type="text" v-model="newTodo" @keydown.enter="submitTodo" class="big n" :placeholder="t('inputPlaceholder')"   />
+        <button class="big n" @click="submitTodo">{{ t("submit") }}</button>
     </div>
 </template>
 
 <script setup>
     import { ref } from 'vue'
+    import { useI18n } from "vue-i18n";
+
+    // i18n
+    const { t } = useI18n();
 
     const newTodo = ref('')
     const emit = defineEmits(['add-todo'])

@@ -26,12 +26,16 @@
     v-if="showCount < filteredTodos.length"
     @click="loadMore"
     class="medium n more_btn"
-  >MORE</button>
+  >{{ t("more") }}</button>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import EmptyState from './EmptyState.vue'
+import { useI18n } from "vue-i18n";
+
+// i18n
+const { t } = useI18n();
 
 const props = defineProps({
   todos: Array,

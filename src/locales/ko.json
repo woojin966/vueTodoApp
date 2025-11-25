@@ -6,6 +6,7 @@
   "filter_todo": "진행중",
   "filter_done": "완료",
 
+  "delete_label" : "삭제하기",
   "delete_all": "전체삭제",
   "delete_selected": "선택삭제",
   "delete_done": "완료삭제",
@@ -13,5 +14,10 @@
   "header_title": "할 일 목록",
   "header_dark": "다크",
   "header_light": "라이트",
-  "lang_toggle": "한국어"
+  "lang_toggle": "한국어",
+
+  "more" : "더보기",
+
+  "empty_msg1" : "할 일을 다 마치셨소 ✨",
+  "empty_msg2" : "새로운 할 일을 추가해보시오!"
 }

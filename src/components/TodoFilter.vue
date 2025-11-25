@@ -6,15 +6,19 @@
     </button>
 
     <ul v-show="open" class="filter_menu">
-      <li><button @click="updateFilter('all')">ALL</button></li>
-      <li><button @click="updateFilter('todo')">TODO</button></li>
-      <li><button @click="updateFilter('done')">DONE</button></li>
+      <li><button @click="updateFilter('all')">{{ t('filter_all') }}</button></li>
+      <li><button @click="updateFilter('todo')">{{ t('filter_todo') }}</button></li>
+      <li><button @click="updateFilter('done')">{{ t('filter_done') }}</button></li>
     </ul>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from "vue-i18n";
+
+// i18n
+const { t } = useI18n();
 
 const props = defineProps({
   modelValue: {
@@ -34,7 +38,9 @@ const updateFilter = (type) => {
   open.value = false
 }
 
-const displayText = computed(() => props.modelValue.toUpperCase())
+const displayText = computed(() => {
+  return t(`filter_${props.modelValue}`);
+});
 </script>
 
 <style scoped lang="scss">

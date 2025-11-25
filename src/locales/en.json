@@ -6,6 +6,7 @@
   "filter_todo": "TODO",
   "filter_done": "DONE",
 
+  "delete_label" : "DELETE",
   "delete_all": "ALL",
   "delete_selected": "SELECTED",
   "delete_done": "DONE",
@@ -13,5 +14,10 @@
   "header_title": "TODO APP",
   "header_dark": "Dark",
   "header_light": "Light",
-  "lang_toggle": "EN"
+  "lang_toggle": "EN",
+
+  "more" : "MORE",
+
+  "empty_msg1" : "You have no tasks ✨",
+  "empty_msg2" : "Add your first to-do!"
 }
