@@ -1,3 +1,12 @@
+<h1 align="center">✨ Vue Todo App ✨</h1>
+<p align="center">
+  A beautifully refined Todo Application featuring Light/Dark themes, i18n, animations, and clean Vue 3 architecture.
+</p>
+
+<p align="center">
+  <img src="./public/vueTodoApp_full_screen.png" width="800">
+</p>
+
 # Vue Todo App
 
 A clean, modern, multi-language (EN/KR) Todo application built with **Vue.js 3**, **SCSS**, and refined UI/UX patterns.
@@ -29,6 +38,16 @@ A clean, modern, multi-language (EN/KR) Todo application built with **Vue.js 3**
 ## 📌 Overview
 
 This project is a fully restructured Todo App built using **Vue 3 + Composition API**, showcasing clean architecture and professional UI/UX polish suitable for international freelance work.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue.js-3.x-42b883?logo=vue.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/SCSS-Design%20System-C76494?logo=sass&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Vite-Bundler-646CFF?logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/I18n-Multi--Language-13A2E8?logo=google-translate&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Font%20Awesome-Icons-528DD7?logo=fontawesome&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Unsplash-API-000000?logo=unsplash&logoColor=white" />
+</p>
 
 ### Included:
 
@@ -259,3 +278,48 @@ Vue 3 + Composition API 기반으로 제작한 Todo 애플리케이션입니다.
 
 본 프로젝트는 **개인 포트폴리오 및 교육용**으로 제작되었습니다.
 상업적 사용 또는 재배포는 불가합니다.
+
+---
+
+## 📦 GitHub Pages Deployment Guide
+
+This project is deployed using **GitHub Pages**.  
+To deploy your own version, follow these steps:
+
+### 1. Clone the repository
+
+\`\`\`bash
+git clone https://github.com/woojin966/vueTodoApp.git
+cd vueTodoApp
+\`\`\`
+
+### 2. Install dependencies
+
+\`\`\`bash
+npm install
+\`\`\`
+
+### 3. Build for production
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+This will generate the `dist/` folder.
+
+### 4. Deploy to GitHub Pages
+
+1. Go to **Settings → Pages**
+2. Under **Build and Deployment**, choose:
+   - **Source**: Deploy from branch
+   - **Branch**: `main`
+   - **Folder**: `/ (root)`
+3. Save the settings
+
+### 5. Automatic Deployment
+
+Once you push changes to `main`, GitHub Pages will automatically rebuild and update your deployed site within **30–60 seconds**.
+
+### ✔ Live URL Example
+
+https://woojin966.github.io/vueTodoApp/
