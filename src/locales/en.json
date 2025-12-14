@@ -19,5 +19,7 @@
   "more" : "MORE",
 
   "empty_msg1" : "You have no tasks ✨",
-  "empty_msg2" : "Add your first to-do!"
+  "empty_msg2" : "Add your first to-do!",
+
+  "alert_msg" : "Please Type Your To Do!"
 }

@@ -22,7 +22,7 @@
             emit('add-todo', trimmed)
             newTodo.value = ''
         } else {
-            alert('할 일을 입력해주세요!')
+            alert(t('alert_msg'));
         }
     }
 </script>
