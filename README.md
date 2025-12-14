@@ -23,7 +23,7 @@ A clean, modern, multi-language (EN/KR) Todo application built with **Vue.js 3**
 
 ### Mobile
 
-![Full Screen Mobile](./public/vueTodoApp_full_screen_mo.png)
+<img src="./public/vueTodoApp_full_screen_mo.png" width="360" alt="Mobile Light" />
 
 ---
 
@@ -157,7 +157,7 @@ npm run build
 
 ### 🌙 Dark Mode
 
-![Dark Mode](./public/vueTodoApp_screenshot2.png)
+![Dark Mode](./public/vueTodoapp_screenshot2.png)
 
 ---
 
@@ -165,11 +165,11 @@ npm run build
 
 ### 🌞 Mobile — Light Mode
 
-![Mobile Light](./public/vueTodoApp_screenshot_mo1.png)
+<img src="./public/vueTodoApp_screenshot_mo1.png" width="360" alt="Mobile Light" />
 
 ### 🌙 Mobile — Dark Mode
 
-![Mobile Dark](./public/vueTodoApp_screenshot_mo2.png)
+<img src="./public/vueTodoApp_screenshot_mo2.png" width="360" alt="Mobile Light" />
 
 ---
 
