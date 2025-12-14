@@ -3,7 +3,7 @@
     <div class="header_inner">
       <div class="actions">
         <button class="lang_btn" @click="toggleLang">
-          {{ locale === 'en' ? 'KO' : 'EN' }}
+          {{ locale === 'en' ? 'EN' : 'KO' }}
         </button>
         <button class="dark_btn"            @click="toggleTheme">
             <font-awesome-icon :icon="themeIcon" />
